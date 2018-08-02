@@ -14,4 +14,21 @@ contract Tickets{
   event TicketKey(bytes32 ticketKey);
   event CanPurchase(bool canPurchase);
   event PaidFor(bool paid);
+
+  modifier onlyOwner(){
+    require(msg.sender == venueOwner);
+    _;
+  }
+
+  modifier notOwner(){
+    require(msg.sender != venueOwner)
+    _;
+  }
+
+  modifier releaseTrue(){
+    require(releseEther);
+    _;
+  }
+
+
 }
