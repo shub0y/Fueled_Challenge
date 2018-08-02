@@ -1,5 +1,11 @@
 pragma solidity ^0.4.21;
 
+/**
+ * @title Ticketing Smart Contract
+ * @dev A contract for booking tickets and adding a venueOwner
+ * using solidity
+ */
+
 contract Tickets {
   //Creating a struct for Ticket which will hold Owner address and whether paid or not
   struct Ticket {
