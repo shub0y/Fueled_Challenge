@@ -30,5 +30,12 @@ contract Tickets{
     _;
   }
 
+  constructor (uint price, string title) public{
+    ticketPrice = price;
+    name = title;
+    venueOwner = msg.sender;
+    releaseEther = false;
+  }
 
+  
 }
